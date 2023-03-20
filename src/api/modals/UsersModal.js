@@ -12,6 +12,8 @@ const UsersSchema = mongoose.Schema({
 
     role: { type: String, require :true, minlength: [5, 'Role must be 5 char long'], maxlength: [15, 'Role must not be 15 char long'], default: 'User' },
 
+    address: { type: String, minlength: [5, 'Address must be 5 char long'], maxlength: [35, 'Address must not be 15 char long'] },
+
     status: { type: Boolean, default: false },
 
     tag : {type:String, default:'user'}

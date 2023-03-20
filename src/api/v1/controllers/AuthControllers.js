@@ -3,7 +3,7 @@ const UsersModal = require("../../modals/UsersModal"); //To save our user
 
 const bcrypt = require("bcryptjs"); //Converting password into hash
 const jwt = require("jsonwebtoken"); //To confirm unique users
-
+ 
 function AuthControllers() {
     return {
         // Register the user ,using POST "register"
@@ -13,9 +13,9 @@ function AuthControllers() {
 
             try {
                 //Check are all blanks
-                if (!name || !phone || !password || !cpassword || !role || !address) {
-                    return res.status(404).json({ success: false, msg: "All field are required" });
-                }
+                // if (!name || !phone || !password || !cpassword || !role || !address) {
+                //     return res.status(404).json({ success: false, msg: "All field are required" });
+                // }
 
                 //Check the password and confirm password are match
                 if ((password !== cpassword)) {
@@ -38,7 +38,8 @@ function AuthControllers() {
                     email,
                     phone,
                     password: hashPassword,
-                    role
+                    role,
+                    address
                 })
 
                 await users.save()
