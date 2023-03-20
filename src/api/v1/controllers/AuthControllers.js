@@ -9,11 +9,11 @@ function AuthControllers() {
         // Register the user ,using POST "register"
         async Register(req, res) {
             //Get the content from req.body
-            const { name, email,phone, password, cpassword,role} = req.body
+            const { name, email,phone, password, cpassword,role,address} = req.body
 
             try {
                 //Check are all blanks
-                if (!name || !phone || !password || !cpassword || !role) {
+                if (!name || !phone || !password || !cpassword || !role || !address) {
                     return res.status(404).json({ success: false, msg: "All field are required" });
                 }
 
