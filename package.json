@@ -1,7 +1,7 @@
 {
-  "name": "achievers",
+  "name": "kisan_api",
   "version": "1.0.0",
-  "description": "Achievers, is a Hackthon E-Learning plateform domain , greb the solutions are related to the real world problem solutions , can made life less of errors",
+  "description": "kisan_api, is a plateform, which are placed of interactions of the farmers, merchants and landlords to make the work easy and make the life happy",
   "main": "server",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
